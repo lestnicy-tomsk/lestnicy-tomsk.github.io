@@ -282,11 +282,13 @@ body.fixed-contacts .about-section {
   padding: 2px;
 }
 
-.grid-item a:hover {
-  z-index: 20;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
+@media (hover: hover) {
+  .grid-item a:hover {
+    z-index: 20;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
 }
 
 @media (max-width: 1024px) {
