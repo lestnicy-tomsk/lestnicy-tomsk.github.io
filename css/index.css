@@ -319,6 +319,7 @@ nav.nav-tabs .nav-item {
   text-align: center;
   color: #fff;
   line-height: 2;
+  transition: all 0.15s ease-in-out;
 }
 
 footer {
