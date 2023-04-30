@@ -6,7 +6,7 @@ const args = process.argv.slice(2);
 for (const dir of args) {
     const src = path.join(dir, 'src');
     fs.readdir(src, (err, files) => {
-        files = files.sort();
+        files = files.sort((a, b) => a < b ? 1 : -1);
         let i = 0;
         for (let file of files) {
             (j => {
