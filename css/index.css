@@ -6,6 +6,10 @@ body {
 }
 
 /* Sections */
+section .container-lg {
+  padding: 0 10px;
+}
+
 .contacts-section {
   padding-bottom: 10px;
   position: relative;
@@ -324,7 +328,8 @@ nav.nav-tabs .nav-item {
   line-height: 2;
   transition: all 0.15s ease-in-out;
   border-radius: 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: #393939;
+  border-color: #393939;
 }
 
 footer {
