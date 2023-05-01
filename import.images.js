@@ -16,11 +16,11 @@ for (const dir of args) {
                     const name = `stairs${j < 10 ? '0' + j.toString() : j}.jpg`;
                     image
                         .scaleToFit(2048, 2048)
-                        .quality(95)
+                        .quality(80)
                         .write(path.join(dir, name));
                     image
                         .resize(512, jimp.AUTO)
-                        .quality(90)
+                        .quality(80)
                         .write(path.join(dir, 'thumbs', name));
                 });
             })(i++);
