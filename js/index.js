@@ -68,4 +68,16 @@ $(function () {
                 location.hash = "";
             });
     }());
+
+    (function initGallery() {
+        function isTouchDevice() {
+            return ('ontouchstart' in window) ||
+                (navigator.maxTouchPoints > 0) ||
+                (navigator.msMaxTouchPoints > 0);
+        }
+
+        if (!isTouchDevice()) {
+            $('#blueimp-gallery').addClass('blueimp-gallery-controls');
+        }
+    }());
 });
