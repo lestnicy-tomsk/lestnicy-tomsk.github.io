@@ -194,25 +194,17 @@ body.fixed-contacts .about-section {
 }
 
 /* Blueimp */
-.blueimp-gallery > a.prev:hover,
-.blueimp-gallery > a.next:hover,
-.blueimp-gallery > a.close:hover,
-.blueimp-gallery > a.title:hover,
-.blueimp-gallery > a.play-pause:hover {
-  color: lightsteelblue;
-  opacity: 1;
-}
-
-.blueimp-gallery > a.next,
 .blueimp-gallery > a.prev,
+.blueimp-gallery > a.next,
 .blueimp-gallery > a.close {
-  border: none;
-  background: none;
-  font-size: 32px;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
 }
 
-.blueimp-gallery > a.close {
-  padding-right: 20px;
+.blueimp-gallery > a.prev:not(.disabled):hover,
+.blueimp-gallery > a.next:not(.disabled):hover,
+.blueimp-gallery > a.close:not(.disabled):hover {
+  opacity: 1;
 }
 
 /* Masonry */
