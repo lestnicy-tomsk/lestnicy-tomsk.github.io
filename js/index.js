@@ -42,12 +42,30 @@ $(function () {
         });
     }());
 
-    function checkFixedContacts() {
-        $('body').toggleClass('fixed-contacts', $(window).scrollTop() > 315);
-    }
+    (function FixedContacts() {
+        function checkFixedContacts() {
+            $('body').toggleClass('fixed-contacts', $(window).scrollTop() > 315);
+        }
 
-    $(window).scroll(function () {
+        $(window).scroll(function () {
+            checkFixedContacts();
+        });
         checkFixedContacts();
-    });
-    checkFixedContacts();
+    }());
+
+    (function BackNavigation() {
+        window.addEventListener('hashchange', function () {
+            if (location.hash !== '#gallery') {
+                $('#blueimp-gallery').data('gallery').close();
+            }
+        });
+
+        $('#blueimp-gallery')
+            .on('open', function () {
+                location.hash = "#gallery";
+            })
+            .on('close', function () {
+                location.hash = "";
+            });
+    }());
 });
