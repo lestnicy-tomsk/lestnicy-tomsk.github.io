@@ -10,6 +10,7 @@ $(function () {
             var path = $grid.data('path');
             var title = $grid.data('title');
             var exclude = ($grid.data('exclude') || '').split(',');
+            var video = ($grid.data('video') || '').split(',');
 
             $grid.append('<div class="grid-sizer"></div>');
             for (var i = 0; i < n; i++) {
@@ -20,6 +21,14 @@ $(function () {
                 item = item.replace(/\{index\}/g, i < 10 ? '0' + i.toString() : i.toString());
                 item = item.replace(/\{path\}/g, path);
                 item = item.replace(/\{title\}/g, title);
+                if (video.indexOf(i.toString()) >= 0) {
+                    item = item.replace(/href="(.*)\.jpg"/, 'href="$1.mp4" data-preload="$1.jpg"');
+                    item = item.replace(/\{mimeType\}/g, 'video/mp4');
+                    item = item.replace(/\{class\}/g, 'video');
+                } else {
+                    item = item.replace(/\{mimeType\}/g, 'image/jpeg');
+                    item = item.replace(/\{class\}/g, 'image');
+                }
                 $grid.append(item);
             }
 
