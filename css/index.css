@@ -268,30 +268,48 @@ body.fixed-contacts .about-section {
   width: 100%;
   padding: 0;
   position: relative;
-  z-index: 10;
-  background: #222222;
-  -webkit-transition: transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
 }
 
 .grid-item.loaded a {
   padding: 2px;
 }
 
-@media (hover: hover) {
-  .grid-item a:hover {
-    z-index: 20;
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-  }
+.grid-item a:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 1px solid transparent;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  z-index: 1;
 }
 
-@media (max-width: 1024px) {
-  .grid-item a:hover {
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
+.grid-item a > .fa {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.grid-item.video a:after {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.grid-item.video a > .fa {
+  display: block;
+}
+
+@media (hover: hover) {
+  .grid-item a:hover:after {
+    background: rgba(0, 0, 0, 0.25);
+    border-color: #e9ecef #e9ecef #dee2e6;
   }
 }
 
