@@ -27,8 +27,8 @@ for (const arg of args) {
             (j => {
                 let f = path.join(src, file);
                 jimp.read(f).then(image => {
-                    console.log('Import ', f);
                     const name = `stairs${j < 10 ? '0' + j.toString() : j}.jpg`;
+                    console.log(f, '>', name);
                     if (images) {
                         image
                             .scaleToFit(2048, 2048)
