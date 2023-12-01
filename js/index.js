@@ -8,6 +8,7 @@ $(function () {
             var $grid = $(this);
             var n = $grid.data('items');
             var path = $grid.data('path');
+            var title = $grid.data('title');
             var exclude = ($grid.data('exclude') || '').split(',');
 
             $grid.append('<div class="grid-sizer"></div>');
@@ -18,6 +19,7 @@ $(function () {
                 var item = template;
                 item = item.replace(/\{index\}/g, i < 10 ? '0' + i.toString() : i.toString());
                 item = item.replace(/\{path\}/g, path);
+                item = item.replace(/\{title\}/g, title);
                 $grid.append(item);
             }
 

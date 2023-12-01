@@ -171,22 +171,21 @@
                     <a class="nav-item nav-link btn-lg" id="year-2021-tab" data-toggle="tab" href="#year-2021" role="tab" aria-controls="year-2021" aria-selected="false">2021</a>
                     <a class="nav-item nav-link btn-lg" id="year-2020-tab" data-toggle="tab" href="#year-2020" role="tab" aria-controls="year-2020" aria-selected="false">2020</a>
                     <a class="nav-item nav-link btn-lg" id="year-2019-tab" data-toggle="tab" href="#year-2019" role="tab" aria-controls="year-2019" aria-selected="false">2019</a>
-                    <a class="nav-item nav-link btn-lg" id="the-best-tab" data-toggle="tab" href="#the-best" role="tab" aria-controls="the-best" aria-selected="false"><i class="fa fa-star"></i> Лучшие Работы</a>
+                    <a class="nav-item nav-link btn-lg" id="the-best-tab" data-toggle="tab" href="#the-best" role="tab" aria-controls="the-best" aria-selected="false"><i class="fa fa-star"></i> Избранное</a>
                 </nav>
-                <div class="grid tab-pane fade show active" data-items="10" data-path="img/2023" id="year-2023" role="tabpanel" aria-labelledby="year-2023-tab"></div>
-                <div class="grid tab-pane fade" data-items="9" data-path="img/2022" id="year-2022" role="tabpanel" aria-labelledby="year-2022-tab"></div>
-                <div class="grid tab-pane fade" data-items="2" data-path="img/2021" id="year-2021" role="tabpanel" aria-labelledby="year-2021-tab"></div>
-                <div class="grid tab-pane fade" data-items="8" data-path="img/2020" id="year-2020" role="tabpanel" aria-labelledby="year-2020-tab"></div>
-                <div class="grid tab-pane fade" data-items="8" data-path="img/2019" id="year-2019" role="tabpanel" aria-labelledby="year-2019-tab"></div>
-                <div class="grid tab-pane fade" data-items="20" data-path="img/the-best" id="the-best" role="tabpanel" aria-labelledby="the-best-tab"></div>
+                <div class="grid tab-pane fade show active" data-items="10" data-path="img/2023" id="year-2023" role="tabpanel" aria-labelledby="year-2023-tab" data-title="Работы 2023 года"></div>
+                <div class="grid tab-pane fade" data-items="9" data-path="img/2022" id="year-2022" role="tabpanel" aria-labelledby="year-2022-tab" data-title="Работы 2022 года"></div>
+                <div class="grid tab-pane fade" data-items="2" data-path="img/2021" id="year-2021" role="tabpanel" aria-labelledby="year-2021-tab" data-title="Работы 2021 года"></div>
+                <div class="grid tab-pane fade" data-items="8" data-path="img/2020" id="year-2020" role="tabpanel" aria-labelledby="year-2020-tab" data-title="Работы 2020 года"></div>
+                <div class="grid tab-pane fade" data-items="8" data-path="img/2019" id="year-2019" role="tabpanel" aria-labelledby="year-2019-tab" data-title="Работы 2019 года"></div>
+                <div class="grid tab-pane fade" data-items="20" data-path="img/the-best" id="the-best" role="tabpanel" aria-labelledby="the-best-tab" data-title="Избранное"></div>
             </div>
         </div>
     </div>
     <script id="grid-item-template" type="template">
         <div class="grid-item">
-            <!-- data-gallery initializes the global click handler to display a gallery of elements -->
-            <a href="{path}/stairs{index}.jpg" data-gallery title="Stairs {index}">
-                <img src="{path}/thumbs/stairs{index}.jpg" loading="lazy" alt="Stairs {index}"/>
+            <a href="{path}/stairs{index}.jpg" data-gallery title="{title}">
+                <img src="{path}/thumbs/stairs{index}.jpg" loading="lazy" alt="{title}"/>
             </a>
         </div>
     </script>
