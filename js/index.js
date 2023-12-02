@@ -73,14 +73,19 @@ $(function () {
 
     (function BackNavigation() {
         window.addEventListener('hashchange', function () {
-            if (location.hash !== '#gallery') {
-                $('#blueimp-gallery').data('gallery').close();
+            if (!location.hash) {
+                $('.blueimp-gallery').each(function () {
+                    const gallery = $(this).data('gallery');
+                    if (gallery) {
+                        gallery.close();
+                    }
+                });
             }
         });
 
-        $('#blueimp-gallery')
+        $('.blueimp-gallery')
             .on('open', function () {
-                location.hash = "#gallery";
+                location.hash = this.id;
             })
             .on('close', function () {
                 location.hash = "";
@@ -95,7 +100,7 @@ $(function () {
         }
 
         if (!isTouchDevice()) {
-            $('#blueimp-gallery').addClass('blueimp-gallery-controls');
+            $('.blueimp-gallery').addClass('blueimp-gallery-controls');
         }
     }());
 });
