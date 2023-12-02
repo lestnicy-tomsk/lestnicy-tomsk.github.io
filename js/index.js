@@ -1,7 +1,8 @@
 $(function () {
 
     (function initGrids() {
-        var template = $('script#grid-item-template').text();
+        var itemTemplate = $('script#grid-item-template').text();
+        var $galleryTemplate = $('#blueimp-gallery-template');
 
         $('.grid').each(function () {
 
@@ -9,6 +10,7 @@ $(function () {
             var n = $grid.data('items');
             var path = $grid.data('path');
             var title = $grid.data('title');
+            var gridId = $grid.attr('id');
             var exclude = ($grid.data('exclude') || '').split(',');
             var video = ($grid.data('video') || '').split(',');
 
@@ -17,10 +19,11 @@ $(function () {
                 if (exclude.indexOf(i.toString()) >= 0) {
                     continue;
                 }
-                var item = template;
+                var item = itemTemplate;
                 item = item.replace(/\{index\}/g, i < 10 ? '0' + i.toString() : i.toString());
                 item = item.replace(/\{path\}/g, path);
                 item = item.replace(/\{title\}/g, title);
+                item = item.replace(/\{gridId\}/g, gridId);
                 if (video.indexOf(i.toString()) >= 0) {
                     item = item.replace(/href="(.*)\.jpg"/, 'href="$1.mp4" data-preload="$1.jpg"');
                     item = item.replace(/\{mimeType\}/g, 'video/mp4');
@@ -31,6 +34,10 @@ $(function () {
                 }
                 $grid.append(item);
             }
+
+            const $gallery = $galleryTemplate.clone();
+            $gallery.attr('id', 'gallery-' + gridId);
+            $galleryTemplate.after($gallery);
 
             $grid.masonry({
                 itemSelector: '.grid-item',

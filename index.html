@@ -184,7 +184,7 @@
     </div>
     <script id="grid-item-template" type="template">
         <div class="grid-item {class}">
-            <a href="{path}/stairs{index}.jpg" data-gallery title="{title}" data-type="{mimeType}">
+            <a href="{path}/stairs{index}.jpg" data-gallery="#gallery-{gridId}" title="{title}" data-type="{mimeType}">
                 <img src="{path}/thumbs/stairs{index}.jpg" loading="lazy" alt="{title}"/>
                 <i class="fa fa-video-camera" aria-hidden="true"></i>
             </a>
@@ -199,7 +199,7 @@
 </footer>
 
 <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
-<div id="blueimp-gallery"
+<div id="blueimp-gallery-template"
      class="blueimp-gallery"
      aria-label="image gallery"
      aria-modal="true"
