@@ -199,12 +199,31 @@ body.fixed-contacts .about-section {
 .blueimp-gallery > a.close {
   opacity: 0.7;
   transition: opacity 0.15s ease;
+  border: none;
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
 }
 
 .blueimp-gallery > a.prev:not(.disabled):hover,
 .blueimp-gallery > a.next:not(.disabled):hover,
 .blueimp-gallery > a.close:not(.disabled):hover {
   opacity: 1;
+}
+
+.blueimp-gallery-svgasimg > .close {
+  width: 42px;
+  height: 42px;
+  background: url("../img/ico-close.svg") center no-repeat;
+}
+
+.blueimp-gallery-svgasimg > .prev {
+  background: url("../img/ico-left-arrow.svg") center no-repeat;
+}
+
+.blueimp-gallery-svgasimg > .next {
+  background: url("../img/ico-right-arrow.svg") center no-repeat;
 }
 
 /* Masonry */
