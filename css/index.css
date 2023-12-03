@@ -201,8 +201,6 @@ body.fixed-contacts .about-section {
   transition: opacity 0.15s ease;
   border: none;
   border-radius: 0;
-  width: 40px;
-  height: 40px;
   padding: 0;
 }
 
@@ -212,18 +210,31 @@ body.fixed-contacts .about-section {
   opacity: 1;
 }
 
-.blueimp-gallery-svgasimg > .close {
-  width: 42px;
-  height: 42px;
+.blueimp-gallery-svgasimg > a.close {
   background: url("../img/ico-close.svg") center no-repeat;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  width: 70px;
+  height: 70px;
 }
 
-.blueimp-gallery-svgasimg > .prev {
+.blueimp-gallery-svgasimg > a.prev {
   background: url("../img/ico-left-arrow.svg") center no-repeat;
+  padding-left: 15px;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 55px;
 }
 
-.blueimp-gallery-svgasimg > .next {
+.blueimp-gallery-svgasimg > a.next {
   background: url("../img/ico-right-arrow.svg") center no-repeat;
+  padding-right: 15px;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 55px;
 }
 
 /* Masonry */
