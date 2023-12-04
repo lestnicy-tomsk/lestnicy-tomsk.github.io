@@ -83,9 +83,7 @@
         }
 
         gtag('js', new Date());
-
-        gtag('config', 'UA-60218534-2');
-    </script>
+        gtag('config', 'UA-60218534-2');</script>
 </head>
 
 <body>
@@ -145,17 +143,6 @@
                     <i class="fa fa-vk" aria-hidden="true"></i><span class="label">&nbsp;&nbsp;Группа ВКонтакте</span>
                 </a>
             </div>
-            <!--<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">-->
-            <!--<div class="btn-group">-->
-            <!--<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"-->
-            <!--aria-haspopup="true" aria-expanded="false">-->
-            <!--Партнеры <span class="caret"></span>-->
-            <!--</button>-->
-            <!--<ul class="dropdown-menu">-->
-            <!--<li><a href="http://primasv.tomsk.ru/">ООО "Прима СВ"</a></li>-->
-            <!--</ul>-->
-            <!--</div>-->
-            <!--</div>-->
         </div>
     </div>
 </section>
@@ -165,26 +152,19 @@
     <div class="container-lg">
         <div class="row">
             <div class="col-md-12">
-                <nav class="nav nav-tabs">
-                    <a class="nav-item nav-link btn-lg active" id="year-2022-tab" data-toggle="tab" href="#year-2023" role="tab" aria-controls="year-2023" aria-selected="true">2023</a>
-                    <a class="nav-item nav-link btn-lg" id="year-2023-tab" data-toggle="tab" href="#year-2022" role="tab" aria-controls="year-2022" aria-selected="true">2022</a>
-                    <a class="nav-item nav-link btn-lg" id="year-2021-tab" data-toggle="tab" href="#year-2021" role="tab" aria-controls="year-2021" aria-selected="false">2021</a>
-                    <a class="nav-item nav-link btn-lg" id="year-2020-tab" data-toggle="tab" href="#year-2020" role="tab" aria-controls="year-2020" aria-selected="false">2020</a>
-                    <a class="nav-item nav-link btn-lg" id="year-2019-tab" data-toggle="tab" href="#year-2019" role="tab" aria-controls="year-2019" aria-selected="false">2019</a>
-                    <a class="nav-item nav-link btn-lg" id="the-best-tab" data-toggle="tab" href="#the-best" role="tab" aria-controls="the-best" aria-selected="false"><i class="fa fa-star" aria-hidden="true"></i> Избранное</a>
-                </nav>
-                <div class="grid tab-pane fade show active" data-items="8" data-path="img/2023" id="year-2023" role="tabpanel" aria-labelledby="year-2023-tab" data-title="Работы 2023 года" data-video="0,"></div>
-                <div class="grid tab-pane fade" data-items="9" data-path="img/2022" id="year-2022" role="tabpanel" aria-labelledby="year-2022-tab" data-title="Работы 2022 года"></div>
-                <div class="grid tab-pane fade" data-items="2" data-path="img/2021" id="year-2021" role="tabpanel" aria-labelledby="year-2021-tab" data-title="Работы 2021 года"></div>
-                <div class="grid tab-pane fade" data-items="8" data-path="img/2020" id="year-2020" role="tabpanel" aria-labelledby="year-2020-tab" data-title="Работы 2020 года"></div>
-                <div class="grid tab-pane fade" data-items="8" data-path="img/2019" id="year-2019" role="tabpanel" aria-labelledby="year-2019-tab" data-title="Работы 2019 года"></div>
-                <div class="grid tab-pane fade" data-items="20" data-path="img/the-best" id="the-best" role="tabpanel" aria-labelledby="the-best-tab" data-title="Избранное"></div>
+                <div class="grid" data-items="8" data-path="img/2023" id="year-2023" data-title="Работы 2023 года" data-video="0,"></div>
+                <div class="grid" data-items="9" data-path="img/2022" id="year-2022" data-title="Работы 2022 года"></div>
+                <div class="grid" data-items="2" data-path="img/2021" id="year-2021" data-title="Работы 2021 года"></div>
+                <div class="grid" data-items="8" data-path="img/2020" id="year-2020" data-title="Работы 2020 года"></div>
+                <div class="grid" data-items="8" data-path="img/2019" id="year-2019" data-title="Работы 2019 года"></div>
+                <div class="grid" data-items="20" data-path="img/the-best" id="the-best" data-title="Избранное"></div>
+                <div class="grid-container"></div>
             </div>
         </div>
     </div>
     <script id="grid-item-template" type="template">
         <div class="grid-item {class}">
-            <a href="{path}/stairs{index}.jpg" data-gallery="#gallery-{gridId}" title="{title}" data-type="{mimeType}">
+            <a href="{path}/stairs{index}.jpg" data-gallery="#gallery" title="{title}" data-type="{mimeType}">
                 <img src="{path}/thumbs/stairs{index}.jpg" loading="lazy" alt="{title}"/>
                 <i class="fa fa-video-camera" aria-hidden="true"></i>
             </a>
@@ -199,7 +179,7 @@
 </footer>
 
 <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
-<div id="blueimp-gallery-template"
+<div id="gallery"
      class="blueimp-gallery"
      aria-label="image gallery"
      aria-modal="true"
