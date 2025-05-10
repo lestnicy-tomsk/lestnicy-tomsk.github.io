@@ -1,8 +1,14 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: #222222;
   display: flex;
   flex-flow: column nowrap;
   min-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Sections */

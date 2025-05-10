@@ -82,12 +82,15 @@ $(function () {
             }
         });
 
+        var scrollPosition = 0;
         $('.blueimp-gallery')
             .on('open', function () {
                 location.hash = this.id;
+                scrollPosition = document.documentElement.scrollTop;
             })
             .on('close', function () {
                 location.hash = "";
+                document.documentElement.scroll({top: scrollPosition, behavior: 'instant'});
             });
     }());
 
