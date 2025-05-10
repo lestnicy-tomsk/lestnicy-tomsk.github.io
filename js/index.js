@@ -3,7 +3,6 @@ $(function () {
     (function initGrids() {
         var itemTemplate = $('script#grid-item-template').text();
         var $gridContainer = $('.grid-container');
-        var videos = [];
         var images = [];
         $gridContainer.append('<div class="grid-sizer"></div>');
 
@@ -29,7 +28,7 @@ $(function () {
                     item = item.replace(/href="(.*)\.jpg"/, 'href="$1.mp4" data-preload="$1.jpg"');
                     item = item.replace(/\{mimeType\}/g, 'video/mp4');
                     item = item.replace(/\{class\}/g, 'video');
-                    videos.push(item);
+                    images.push(item);
                 } else {
                     item = item.replace(/\{mimeType\}/g, 'image/jpeg');
                     item = item.replace(/\{class\}/g, 'image');
@@ -38,7 +37,6 @@ $(function () {
             }
         });
 
-        videos.forEach(item => $gridContainer.append(item));
         images.forEach(item => $gridContainer.append(item));
 
         $gridContainer.masonry({
